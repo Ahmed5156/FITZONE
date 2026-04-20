@@ -1,0 +1,142 @@
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Website</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Fitzone</h1>
+
+<nav>
+  <a href="#" class="nav-item">Home</a>
+  <a href="#" class="nav-item">Programs</a>
+  <a href="#" class="nav-item">Trainers</a>
+  <a href="#" class="nav-item">Contact</a>
+</nav>
+
+<div class="nav-buttons">
+  <a href="#" class="nav-item login-btn">Log In</a>
+  <a href="#" class="nav-item join-btn">Join Now</a>
+</div>
+
+  <!-- your "man" -->
+  <div id="character">
+<img src="../images//man.jpeg"  alt="man">
+</div>
+</header>
+
+  <section class="hero-slider">
+
+    <button class="prev">←</button>
+    <button class="next">→</button>
+
+    <div class="overlay">
+      <h2>OUR PROGRAMS</h2>
+      <p>Build strength, stamina and confidence with our professional training programs.</p>
+      <a href="#" class="btn">View More</a>
+    </div>
+
+  </section>
+
+<section class="about">
+  <p>
+    Welcome to FitZone Gym your ultimate fitness destination. We combine modern training with expert guidance to help you achieve your dream physique.
+  </p>
+  <a href="#" class="btn dark">About Us</a>
+</section>
+
+<section class="stats">
+  <div class="stat-box">
+    <h2>40+</h2>
+    <p>Workout Programs</p>
+  </div>
+  <div class="stat-box">
+    <h2>5000+</h2>
+    <p>Members</p>
+  </div>
+  <div class="stat-box">
+    <h2>120</h2>
+    <p>Trainers</p>
+  </div>
+  <div class="stat-box">
+    <h2>25</h2>
+    <p>Awards</p>
+  </div>
+</section>
+
+<section class="products">
+  <div class="product pink">
+    <h3>Cardio</h3>
+    <img src="../images/cardio.jpg" alt="cardio">
+  </div>
+  <div class="product yellow" >
+    <h3>Strength</h3>
+    <img src="../images/strth.jpg" alt="strength">
+  </div>
+  <div class="product blue">
+    <h3>Yoga</h3>
+    <img src="../images/yoga.jpg" alt="yoga">
+  </div>
+  <div class="product orange">
+    <h3>CrossFit</h3>
+    <img src="../images/crs.jpg" alt="crossfit">
+  </div>
+</section>
+
+<section class="contact-info">
+
+  <h2>CONTACT US</h2>
+
+  <div class="contact-boxes">
+
+    <div class="info-box">
+      <h3>Address</h3>
+      <p>Near Old Bus Stand, Uppinangady</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Phone</h3>
+      <p>+91 81970 23569</p>
+    </div>
+
+    <div class="info-box">
+      <h3>Working Hours</h3>
+      <p>Mon - Sat: 6:00 AM - 10:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+
+  </div>
+<div class="social-icons">
+
+  <a href="#" target="_blank">
+    <img src="../images/insta.jpeg" alt="Instagram">
+  </a>
+
+  <a href="#" target="_blank">
+    <img src="../images/fb.jpeg" alt="Facebook">
+  </a>
+
+</div>
+<script>
+const character = document.getElementById("character");
+const items = document.querySelectorAll(".nav-item");
+
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    const rect = item.getBoundingClientRect();
+    const parentRect = document.querySelector(".navbar").getBoundingClientRect();
+
+    character.style.left = (rect.left - parentRect.left + rect.width/2 - 20) + "px";
+
+    // jump effect
+    character.classList.remove("jump");
+    void character.offsetWidth;
+    character.classList.add("jump");
+  });
+});
+</script>
+</body>
+</html>
