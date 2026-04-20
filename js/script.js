@@ -3,10 +3,10 @@ let index = 0;
 const slider = document.querySelector('.hero-slider');
 
 const images = [
-  "images/4.jpeg",
-  "images/3.jpeg",
-  "images/2.jpeg",
-  "images/1.jpeg"
+  "../images/4.jpeg",
+  "../images/3.jpeg",
+  "../images/2.jpeg",
+  "../images/1.jpeg"
 ];
 
 document.querySelector('.next').onclick = () => {
