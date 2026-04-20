@@ -17,6 +17,4 @@ document.querySelector('.next').onclick = () => {
 document.querySelector('.prev').onclick = () => {
   index = (index - 1 + images.length) % images.length;
   slider.style.backgroundImage = `url('${images[index]}')`;
-  slider.style.backgroundImage = `url('${images[0]}')`;
 };
-
