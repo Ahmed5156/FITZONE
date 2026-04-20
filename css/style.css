@@ -124,11 +124,11 @@ header {
 
 .hero-slider {
   position: relative;
-  height: 400px;
   background-image: url('../images/3.jpeg');
   background-size: cover;
   background-position: center;
   transition: background-image 0.5s ease-in-out;
+  height: 400px;  
 }
 
 /* dark overlay for text */
